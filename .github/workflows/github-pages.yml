@@ -16,11 +16,17 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: "14"
-      - run: yarn install
+      - run: yarn install && yarn global install @lhci/cli@0.7.x
       - run: yarn build && yarn export
-
-      - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@4.1.1
+      - run: lhci autorun
+        env:
+          LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
+   
+      - name: Netlify Actions
+        uses: nwtgck/actions-netlify@v1.1.11
         with:
-          branch: gh-pages
-          folder: out
+          publish-dir: out
+          production-deploy: true
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_PERSONAL_ACCESS_TOKEN }}
+          NETLIFY_SITE_ID: b444ccc5-1614-4dc2-8adb-f69d1eb88054
