@@ -1,37 +1,52 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/b444ccc5-1614-4dc2-8adb-f69d1eb88054/deploy-status)](https://app.netlify.com/sites/perf-test-next/deploys)
+<h1 align="center">Welcome to @lighthouse-test 👋</h1>
+<p>
+  <a href="https://github.com/lighthouse-test/next-static/graphs/commit-activity" target="_blank">
+    <img alt="Maintenance" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" />
+  </a>
+  <a href="https://github.com/lighthouse-test/next-static/blob/main/LICENSE" target="_blank">
+    <img alt="License: MIT" src="https://img.shields.io/github/license/@lighthouse-test/next-static" />
+  </a>
+  <a href="https://twitter.com/aceonics" target="_blank">
+    <img alt="Twitter: aceonics" src="https://img.shields.io/twitter/follow/aceonics.svg?style=social" />
+  </a>
+</p>
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/
-next.js/tree/canary/packages/create-next-app).
+<p>
+  <a href="https://lighthouse-test.github.io/next-static/_lighthouse/_.report.html">
+    <img src="https://lighthouse-test.github.io/next-static/_lighthouse/_.performance.svg" />
+    <img src="https://lighthouse-test.github.io/next-static/_lighthouse/_.accessibility.svg" />
+    <img src="https://lighthouse-test.github.io/next-static/_lighthouse/_.best-practices.svg" />
+    <img src="https://lighthouse-test.github.io/next-static/_lighthouse/_.seo.svg" />
+    <img src="https://lighthouse-test.github.io/next-static/_lighthouse/_.pwa.svg" />
+  </a>
+</p>
 
-## Getting Started
+> This repository contains demo app to test the light house score. This is part of lighthouse test.
 
-First, run the development server:
+### 🏠 [Lighthouse Results](https://lighthouse-test.github.io)
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+## Author
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+👤 **Aceonics Reliable IT Services**
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+- Website: [https://www.aceonics.com](https://www.aceonics.com)
+- Twitter: [@aceonics](https://twitter.com/aceonics)
+- Github: [aceonics](https://github.com/aceonics)
+- LinkedIn: [aceonics](https://linkedin.com/company/aceonics)
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+## 🤝 Contributing
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/lighthouse-test/lighthouse.github.io/issues).
 
-## Learn More
+## Show your support
 
-To learn more about Next.js, take a look at the following resources:
+Give a ⭐️ if this project helped you!
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📝 License
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Copyright © 2021 [Aceonics Reliable IT Services](https://www.aceonics.com).<br />
+This project is [MIT](https://github.com/lighthouse-test/next-static/blob/master/LICENSE) licensed.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
