@@ -20,17 +20,13 @@ class MyDocument extends Document {
         </Head>
         <body>
           <header>
-            <h1>Next Static Demo</h1>
+            <h1>Next Demo</h1>
             <nav>
               <a href="/">Home</a>
             </nav>
           </header>
           <br />
-          <br />
-          <br />
           <Main />
-          <br />
-          <br />
           <br />
           <footer>
             Check the lighthouse results at
