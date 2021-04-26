@@ -1,25 +1,23 @@
-import { NextPage } from "next";
+import React from "react";
 import Head from "next/head";
+import Todos from "../components/todos";
 
-interface Props {
-  title: string;
+interface Props {}
+
+export default class Index extends React.Component<Props> {
+  render() {
+    return (
+      <div>
+        <Head>
+          <title>Lighthouse Test | Next Staic Home</title>
+          <meta
+            name="description"
+            content="Lighthouse Test | Next Staic Home"
+          />
+        </Head>
+        <h2>Home</h2>
+        <Todos />
+      </div>
+    );
+  }
 }
-
-const Page: NextPage<Props> = ({ title }) => {
-  return (
-    <div>
-      <Head>
-        <title>Next</title>
-      </Head>
-      <h1>Hello {title}!!!</h1>
-    </div>
-  );
-};
-
-Page.getInitialProps = async ({}) => {
-  const title = "World";
-
-  return { title };
-};
-
-export default Page;
