@@ -49,10 +49,10 @@ export default class Todos extends React.Component<Props, State> {
 
   deleteTodoHandler(id: number) {
     deleteTodo(id);
+    this.setState({ todos: getTodos() });
   }
 
   onUpdateTodoHandler(todo: Partial<Todo>) {
-    console.log(todo);
     if (!todo.id) {
       addTodo(todo);
     } else {
