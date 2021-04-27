@@ -47,18 +47,18 @@ export default class Todos extends React.Component<Props, State> {
     this.setState({ currentTodo: getTodo(id) });
   }
 
-  deleteTodoHandler(id: number) {
-    deleteTodo(id);
-    this.setState({ todos: getTodos() });
-  }
-
   onUpdateTodoHandler(todo: Partial<Todo>) {
     if (!todo.id) {
       addTodo(todo);
     } else {
       updateTodo(todo as Todo);
     }
-    this.setState({ currentTodo: null });
+    this.setState({ currentTodo: null, todos: getTodos() });
+  }
+
+  deleteTodoHandler(id: number) {
+    deleteTodo(id);
+    this.setState({ todos: getTodos() });
   }
 
   render() {
