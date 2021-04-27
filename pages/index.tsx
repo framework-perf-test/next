@@ -7,9 +7,7 @@ interface Props {}
 
 export default class Index extends React.Component<Props> {
   getTodoComponent() {
-    console.log("in todocomp", process.env.MODE);
     if (process.env.MODE === "spa") {
-      console.log("nossr");
       const NoSSRTodos = dynamic(() => import("../components/todos"), {
         ssr: false,
       });
