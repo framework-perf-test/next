@@ -1,11 +1,11 @@
 [
   {
-    "url": "http://localhost:42905/",
+    "url": "http://localhost:42343/",
     "isRepresentativeRun": false,
     "htmlPath": "/home/runner/work/next/next/out/_lighthouse/_.report.html",
     "jsonPath": "/home/runner/work/next/next/out/_lighthouse/_.report.json",
     "summary": {
-      "performance": 0.81,
+      "performance": 0.93,
       "accessibility": 0.98,
       "best-practices": 1,
       "seo": 0.94,
@@ -13,7 +13,7 @@
     }
   },
   {
-    "url": "http://localhost:42905/",
+    "url": "http://localhost:42343/",
     "isRepresentativeRun": false,
     "htmlPath": "/home/runner/work/next/next/out/_lighthouse/_.report.html",
     "jsonPath": "/home/runner/work/next/next/out/_lighthouse/_.report.json",
@@ -26,7 +26,7 @@
     }
   },
   {
-    "url": "http://localhost:42905/",
+    "url": "http://localhost:42343/",
     "isRepresentativeRun": true,
     "htmlPath": "/home/runner/work/next/next/out/_lighthouse/_.report.html",
     "jsonPath": "/home/runner/work/next/next/out/_lighthouse/_.report.json",
