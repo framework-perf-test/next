@@ -19,7 +19,7 @@ jobs:
         with:
           node-version: "14"
       - run: yarn install
-      - run: MODE=spa yarn build && yarn export
+      - run: MODE=spa yarn build && MODE=spa yarn export
       - run: npm install -g @lhci/cli@0.7.x @lighthouse-test/badge-generator
       - run: lhci autorun --config ./.lighthouserc.spa.json
       - run: lighthouse-badge-generator ${{ env.BUILD_PATH }}/_lighthouse
