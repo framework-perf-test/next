@@ -1,0 +1,1 @@
+{"ast":null,"code":"import { jsx as _jsx } from \"react/jsx-runtime\";\nimport React from \"react\";\nexport default class Index extends React.Component {\n  render() {\n    return /*#__PURE__*/_jsx(\"h2\", {\n      children: \"Seems like this page doesn't exist :(\"\n    });\n  }\n\n}","map":null,"metadata":{},"sourceType":"module"}
