@@ -7,8 +7,8 @@ import {
   addTodo,
   updateTodo,
   deleteTodo,
-} from "../lib/todos";
-import TodoForm from "./todo-form";
+} from "./todos";
+import TodoForm from "./TodoForm";
 
 interface State {
   currentTodo: Partial<Todo> | null;

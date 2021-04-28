@@ -1,5 +1,5 @@
 import React from "react";
-import { Todo, TYPES } from "../lib/todos";
+import { Todo, TYPES } from "./todos";
 
 interface State {
   todo: Partial<Todo>;

@@ -1,14 +1,12 @@
 import React from "react";
 import Head from "next/head";
-import Todos from "../components/todos";
+import Todos from "../components/Todos";
 import dynamic from "next/dynamic";
 
-interface Props {}
-
-export default class Index extends React.Component<Props> {
+export default class Index extends React.Component {
   getTodoComponent() {
     if (process.env.MODE === "spa") {
-      const NoSSRTodos = dynamic(() => import("../components/todos"), {
+      const NoSSRTodos = dynamic(() => import("../components/Todos"), {
         ssr: false,
       });
       return <NoSSRTodos />;
@@ -22,10 +20,7 @@ export default class Index extends React.Component<Props> {
       <div>
         <Head>
           <title>Lighthouse Test | Next</title>
-          <meta
-            name="description"
-            content="Lighthouse Test | Next"
-          />
+          <meta name="description" content="Lighthouse Test | Next" />
         </Head>
         <h2>Home</h2>
         {this.getTodoComponent()}

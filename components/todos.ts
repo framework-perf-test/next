@@ -8,6 +8,14 @@ export interface Todo {
   date: string;
 }
 
+export interface TodoErrorStatus {
+  name?: string;
+  description?: string;
+  type?: string;
+  date?: string;
+  status: boolean;
+}
+
 export const TYPES = [
   'Feature',
   'Docs',
@@ -37,13 +45,13 @@ export const addTodo = (todo: Partial<Todo>) => {
 
 export const deleteTodo = (id: number) => {
   const todos = getTodos();
-  let todo = getTodo(id);
+  const todo = getTodo(id);
   const index = todos.indexOf(todo);
   todos.splice(index, 1);
 }
 
 export const updateTodo = (update: Todo) => {
-  let todo = getTodo(update.id);
+  const todo = getTodo(update.id);
   const todos = getTodos();
   const index = todos.indexOf(todo);
   todos[index] = update;
