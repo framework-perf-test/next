@@ -100,7 +100,7 @@ export default class TodoForm extends React.Component<Props, State> {
 
   render() {
     return (
-      <section>
+      <>
         <h4>{this.state.todo.id ? "Update" : "Add"} Todo</h4>
         <form onSubmit={this.updateTodoHandler} noValidate>
           <table>
@@ -225,7 +225,7 @@ export default class TodoForm extends React.Component<Props, State> {
             </tbody>
           </table>
         </form>
-      </section>
+      </>
     );
   }
 }

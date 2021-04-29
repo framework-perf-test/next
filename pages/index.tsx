@@ -17,14 +17,14 @@ export default class Index extends React.Component {
 
   render() {
     return (
-      <div>
+      <>
         <Head>
           <title>Lighthouse Test | Next</title>
           <meta name="description" content="Lighthouse Test | Next" />
         </Head>
         <h2>Home</h2>
         {this.getTodoComponent()}
-      </div>
+      </>
     );
   }
 }

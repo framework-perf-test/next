@@ -63,7 +63,7 @@ export default class Todos extends React.Component<Props, State> {
 
   render() {
     return (
-      <section>
+      <>
         <h3>
           Todos <button onClick={this.addTodoHandler}>New</button>
         </h3>
@@ -115,7 +115,7 @@ export default class Todos extends React.Component<Props, State> {
             ))}
           </tbody>
         </table>
-      </section>
+      </>
     );
   }
 }

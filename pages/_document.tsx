@@ -5,6 +5,7 @@ import Document, {
   NextScript,
   DocumentContext,
 } from "next/document";
+import Link from "next/link";
 
 class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext) {
@@ -22,7 +23,9 @@ class MyDocument extends Document {
           <header>
             <h1>Next Demo</h1>
             <nav>
-              <a href="/">Home</a>
+              <Link href="/">
+                <a>Home</a>
+              </Link>
             </nav>
           </header>
           <br />
