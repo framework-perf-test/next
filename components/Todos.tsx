@@ -104,6 +104,7 @@ export default class Todos extends React.Component<Props, State> {
                   >
                     Edit
                   </button>
+                  &nbsp;
                   <button
                     type="button"
                     onClick={() => this.deleteTodoHandler(todo.id)}
