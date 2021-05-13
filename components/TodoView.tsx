@@ -31,39 +31,27 @@ export default class TodoForm extends React.Component<Props, State> {
         <table>
           <tbody>
             <tr>
-              <th>
-                Name
-              </th>
+              <th align="left">Name</th>
               <td>{this.state.todo.name}</td>
             </tr>
             <tr>
-              <th>
-                Description
-              </th>
+              <th align="left">Description</th>
               {this.state.todo.description}
             </tr>
             <tr>
-              <th>
-                Type
-              </th>
+              <th align="left">Type</th>
               <td>{this.state.todo.type}</td>
             </tr>
             <tr>
-              <th>
-                Confidential
-              </th>
+              <th align="left">Confidential</th>
               <td>{this.state.todo.confidential}</td>
             </tr>
             <tr>
-              <th align="left">
-                Remind
-              </th>
-              <td>{this.state.todo.remind.toString()}</td>
+              <th align="left">Remind</th>
+              <td>{this.state.todo.remind?.toString()}</td>
             </tr>
             <tr>
-              <th>
-                Date
-              </th>
+              <th align="left">Date</th>
               <td>{this.state.todo.date}</td>
             </tr>
             <tr>

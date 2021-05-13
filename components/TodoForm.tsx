@@ -88,7 +88,7 @@ export default class TodoForm extends React.Component<Props, State> {
         },
       }));
     }
-    
+
     setTimeout(() => {
       if (!this.state.errors.status) {
         this.props.onAddOrUpdate(this.state.todo);
@@ -106,7 +106,7 @@ export default class TodoForm extends React.Component<Props, State> {
           <table>
             <tbody>
               <tr>
-                <th>
+                <th align="left">
                   <label htmlFor="name">Name</label>
                 </th>
                 <td>
@@ -122,7 +122,7 @@ export default class TodoForm extends React.Component<Props, State> {
                 <td>{this.state.errors.name}</td>
               </tr>
               <tr>
-                <th>
+                <th align="left">
                   <label htmlFor="description">description</label>
                 </th>
                 <td>
@@ -137,7 +137,7 @@ export default class TodoForm extends React.Component<Props, State> {
                 <td>{this.state.errors.description}</td>
               </tr>
               <tr>
-                <th>
+                <th align="left">
                   <label>Type</label>
                 </th>
                 <td>
@@ -158,7 +158,7 @@ export default class TodoForm extends React.Component<Props, State> {
                 <td>{this.state.errors.type}</td>
               </tr>
               <tr>
-                <th>
+                <th align="left">
                   <label>Confidential</label>
                 </th>
                 <td>
@@ -200,7 +200,7 @@ export default class TodoForm extends React.Component<Props, State> {
                 <td></td>
               </tr>
               <tr>
-                <th>
+                <th align="left">
                   <label htmlFor="date">Date</label>
                 </th>
                 <td>
