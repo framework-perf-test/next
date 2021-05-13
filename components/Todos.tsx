@@ -8,10 +8,13 @@ import {
   updateTodo,
   deleteTodo,
 } from "./todos";
+
+import TodoView from "./TodoView";
 import TodoForm from "./TodoForm";
 
 interface State {
   currentTodo: Partial<Todo> | null;
+  currentEvent: string | null;
   todos: Todo[];
 }
 
@@ -22,6 +25,7 @@ export default class Todos extends React.Component<Props, State> {
     super(props);
     this.state = {
       currentTodo: null,
+      currentEvent: null,
       todos: getTodos(),
     };
 
@@ -32,6 +36,7 @@ export default class Todos extends React.Component<Props, State> {
 
   addTodoHandler() {
     this.setState({
+      currentEvent: "edit",
       currentTodo: {
         name: "",
         description: "",
@@ -43,8 +48,8 @@ export default class Todos extends React.Component<Props, State> {
     });
   }
 
-  selectTodoHandler(id: number) {
-    this.setState({ currentTodo: getTodo(id) });
+  selectTodoHandler(id: number, currentEvent: string) {
+    this.setState({ currentEvent, currentTodo: getTodo(id) });
   }
 
   onUpdateTodoHandler(todo: Partial<Todo>) {
@@ -67,7 +72,13 @@ export default class Todos extends React.Component<Props, State> {
         <h3>
           Todos <button onClick={this.addTodoHandler}>New</button>
         </h3>
-        {this.state.currentTodo && (
+        {this.state.currentTodo && this.state.currentEvent === "view" && (
+          <TodoView
+            todo={this.state.currentTodo}
+            onClose={() => this.setState({ currentEvent: null })}
+          />
+        )}
+        {this.state.currentTodo && this.state.currentEvent === "edit" && (
           <TodoForm
             todo={this.state.currentTodo}
             onAddOrUpdate={this.onUpdateTodoHandler}
@@ -100,7 +111,14 @@ export default class Todos extends React.Component<Props, State> {
                 <td>
                   <button
                     type="button"
-                    onClick={() => this.selectTodoHandler(todo.id)}
+                    onClick={() => this.selectTodoHandler(todo.id, "view")}
+                  >
+                    View
+                  </button>
+                  &nbsp;
+                  <button
+                    type="button"
+                    onClick={() => this.selectTodoHandler(todo.id, "edit")}
                   >
                     Edit
                   </button>
