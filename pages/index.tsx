@@ -1,10 +1,10 @@
-import React from "react";
+import React, { FunctionComponent } from "react";
 import Head from "next/head";
 import Todos from "../components/Todos";
 import dynamic from "next/dynamic";
 
-export default class Index extends React.Component {
-  getTodoComponent() {
+export const Index: FunctionComponent = () => {
+  const getTodoComponent = () => {
     if (process.env.MODE === "spa") {
       const NoSSRTodos = dynamic(() => import("../components/Todos"), {
         ssr: false,
@@ -13,18 +13,18 @@ export default class Index extends React.Component {
     } else {
       return <Todos />;
     }
-  }
+  };
 
-  render() {
-    return (
-      <>
-        <Head>
-          <title>Lighthouse Test | Next</title>
-          <meta name="description" content="Lighthouse Test | Next" />
-        </Head>
-        <h2>Home</h2>
-        {this.getTodoComponent()}
-      </>
-    );
-  }
-}
+  return (
+    <>
+      <Head>
+        <title>Lighthouse Test | Next</title>
+        <meta name="description" content="Lighthouse Test | Next" />
+      </Head>
+      <h2>Home</h2>
+      {getTodoComponent()}
+    </>
+  );
+};
+
+export default Index;

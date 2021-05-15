@@ -1,7 +1,7 @@
-import React from "react";
+import React, { FunctionComponent } from "react";
 
-export default class Index extends React.Component {
-  render() {
-    return <h2>Seems like this page doesn't exist :(</h2>;
-  }
-}
+export const Index: FunctionComponent = () => {
+  return <h2>Seems like this page doesn't exist :(</h2>;
+};
+
+export default Index;

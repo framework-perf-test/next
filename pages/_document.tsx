@@ -7,6 +7,34 @@ import Document, {
 } from "next/document";
 import Link from "next/link";
 
+function MyDocumentComponent() {
+  return (
+    <>
+      <header>
+        <h1>Next Demo</h1>
+        <nav>
+          <Link href="/">
+            <a>Home</a>
+          </Link>
+        </nav>
+      </header>
+      <br />
+      <Main />
+      <br />
+      <footer>
+        Check the lighthouse results at
+        <a
+          href="https://lighthouse-test.github.io"
+          rel="noopener"
+          target="_blank"
+        >
+          https://lighthouse-test.github.io
+        </a>
+      </footer>
+    </>
+  );
+}
+
 class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext) {
     const initialProps = await Document.getInitialProps(ctx);
@@ -20,27 +48,7 @@ class MyDocument extends Document {
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <body>
-          <header>
-            <h1>Next Demo</h1>
-            <nav>
-              <Link href="/">
-                <a>Home</a>
-              </Link>
-            </nav>
-          </header>
-          <br />
-          <Main />
-          <br />
-          <footer>
-            Check the lighthouse results at
-            <a
-              href="https://lighthouse-test.github.io"
-              rel="noopener"
-              target="_blank"
-            >
-              https://lighthouse-test.github.io
-            </a>
-          </footer>
+          <MyDocumentComponent />
           <NextScript />
         </body>
       </Html>
