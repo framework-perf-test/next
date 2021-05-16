@@ -97,7 +97,7 @@ export const TodoForm: FunctionComponent<Props> = (props: Props) => {
             </tr>
             <tr>
               <th align="left">
-                <label htmlFor="description">description</label>
+                <label htmlFor="description">Description</label>
               </th>
               <td>
                 <textarea
