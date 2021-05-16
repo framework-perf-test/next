@@ -1,5 +1,6 @@
 import React, { FunctionComponent } from "react";
 import Head from "next/head";
+import Layout from "../components/Layout";
 import Todos from "../components/Todos";
 import dynamic from "next/dynamic";
 
@@ -16,14 +17,16 @@ export const Index: FunctionComponent = () => {
   };
 
   return (
-    <>
-      <Head>
-        <title>Lighthouse Test | Next</title>
-        <meta name="description" content="Lighthouse Test | Next" />
-      </Head>
-      <h2>Home</h2>
-      {getTodoComponent()}
-    </>
+    <Layout>
+      <>
+        <Head>
+          <title>Lighthouse Test | Next</title>
+          <meta name="description" content="Lighthouse Test | Next" />
+        </Head>
+        <h2>Home</h2>
+        {getTodoComponent()}
+      </>
+    </Layout>
   );
 };
 
